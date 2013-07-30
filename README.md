@@ -1,5 +1,4 @@
-Daytime
+daytime
 =======
 
-24 hours time management class
-
+ruby 24 hours time management class
