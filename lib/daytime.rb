@@ -6,7 +6,8 @@ class Daytime
 			Daytime.new(array[0]*3600 + array[1]*60 + array[2])
 		end
 		def from_string(string)
-			Daytime.from_array string.split(':').map(&:to_i)
+			ary = string.split(':').map(&:to_i)
+			Daytime.from_array( ary + [0]*(3 - ary.size) )
 		end
 		def from_hash(hash)
 			Daytime.from_array [ hash[:hours], hash[:minutes], hash[:seconds] ]

@@ -1,4 +1,4 @@
-require_relative '../daytime'
+require 'spec_helper'
 
 describe Daytime do
 
@@ -8,6 +8,10 @@ describe Daytime do
 
 	it "initializes from a string" do
 		Daytime.from_string("12:34:56").to_seconds == 45296
+	end
+
+	it "initializes from a string without seconds" do
+		Daytime.from_string("12:34").to_s.should == "12:34:00"
 	end
 
 	it "initializes from an array" do
