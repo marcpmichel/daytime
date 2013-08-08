@@ -118,4 +118,14 @@ describe Daytime do
 		end
 	end
 
+	context "interaction" do
+		it "does support #inspect ftw !" do
+			Daytime.new(0).should respond_to(:inspect)
+		end
+
+		it "default-initialize with 0" do
+			Daytime.new.to_s.should == "00:00:00"
+		end
+	end
+
 end

@@ -18,7 +18,7 @@ class Daytime
 	end
 
 
-	def initialize(seconds_from_the_beginning_of_day)
+	def initialize(seconds_from_the_beginning_of_day = 0)
 		@day_seconds = seconds_from_the_beginning_of_day
 	end
 
